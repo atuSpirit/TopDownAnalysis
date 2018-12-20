@@ -9,7 +9,7 @@ public class Main {
 
         List<TopDownSpectrum> tdSpectrumList = mgfReader.loadMS2Spectra(mgfFile, "HCD");
 */
-        String msalignFile = "D:\\Hao\\data\\for_analysis\\TopPICmsalign\\FAB_reduced_2_CID_ms2.msalign";
+        String msalignFile = "D:\\Hao\\data\\for_analysis\\TopPICmsalign\\valuablePeaks.twoAA\\FAB_MAB_TCEP_ETD_ms2.msalign";
 
         MSAlignFileReader msAlignFileReader = new MSAlignFileReader();
 
@@ -38,7 +38,7 @@ public class Main {
 
 
         tdProcessor.removeNoisePeaks(tdSpectrumList);
-        String outFile = msalignFile.replace(".msalign", "") + "_valublePeak.msalign";
+        String outFile = msalignFile.replace(".msalign", "") + "_valublePeak.twoAA.msalign";
         MSAlignFileWriter msAlignFileWriter = new MSAlignFileWriter();
         msAlignFileWriter.writeValuablePeakListToMGF(outFile, tdSpectrumList);
 
